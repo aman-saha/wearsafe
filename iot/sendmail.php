@@ -8,7 +8,7 @@
 
 	$query = "SELECT email from usr_tbl WHERE key = '$gkey";
 	$result = mysqli_query($conn,$query);
-
+	$gkey = "Bbyc689ZxC";
 	if($result)
 	{
 		while($row = mysqli_fetch_assoc($result))
