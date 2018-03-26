@@ -1,7 +1,7 @@
 <?php
 $DB_SERVER="127.0.0.1";
     $DB_USER="root";
-    $DB_PASS="";
+    $DB_PASS="root";
     $DB_NAME="iot";
 //set timezone
     date_default_timezone_set('Asia/Calcutta');
