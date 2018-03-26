@@ -1,12 +1,13 @@
 <?php 
 	include("includes/functions.php");
-	include("includes/config.inc.php");
+	include("config.inc.php");
 ?>
 <?php
 	
-	$gkey = $_POST['Gkey'];
-
-	$query = "SELECT email from usr_tbl WHERE key = '$gkey";
+	//$gkey = $_POST['Gkey'];
+	$gkey = "Bbyc689ZxC";
+	//echo "dsajh";
+	$query = "SELECT email from usr_tbl WHERE Gkey = '$gkey'";
 	$result = mysqli_query($conn,$query);
 
 	if($result)
@@ -14,6 +15,7 @@
 		while($row = mysqli_fetch_assoc($result))
 		{
 			$email = $row['email'];
+			echo $email;
 			require 'PHPMailer-master/PHPMailerAutoload.php';
 
 			$mail = new PHPMailer;
