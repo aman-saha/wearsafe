@@ -17,6 +17,7 @@
 			$email = $row['email'];
 			echo $email;
 			require 'PHPMailer-master/PHPMailerAutoload.php';
+			require 'vendor/autoload.php';
 			$mail = new PHPMailer;
 			$mail->isSMTP();
 			$mail->Host = "smtp.gmail.com";
@@ -29,8 +30,8 @@
 			$mail->addAddress("$email");
 			$mail->WordWrap = 50;
 			$mail->isHTML(true);
-			$mail->Subject = 'Tag Team registration.';
-			$mail->Body    = 'You have successfully registered for <b>Tag-me-Not</b> Regards, Team Tag. ';
+			$mail->Subject = 'Wear Safe Alert.';
+			$mail->Body    = 'You have gandu  successfully registered for <b>Tag-me-Not</b> Regards, Team Tag. ';
 			$mail->AltBody = 'This is the body in plain text for non-HTML mail clients';
 			if(!$mail->send()) {
 			   echo 'Message could not be sent.';
