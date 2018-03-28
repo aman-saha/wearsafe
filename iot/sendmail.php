@@ -10,10 +10,9 @@
 	$query = "SELECT email from usr_tbl WHERE gps_id = '$gkey'";
 	$result = mysqli_query($conn,$query);
 	//$gkey = "Bbyc689ZxC";
-	echo "$gkey";
 	if($result)
 	{
-		/*while($row = mysqli_fetch_assoc($result))
+		while($row = mysqli_fetch_assoc($result))
 		{
 			$email = $row['email'];
 			echo $email;
@@ -39,7 +38,7 @@
 			   echo 'Mailer Error: ' . $mail->ErrorInfo;
 			   exit;
 			}
-*/
+
 		}
 	}
 
