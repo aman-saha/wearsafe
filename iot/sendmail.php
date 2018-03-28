@@ -12,14 +12,14 @@
 	//$gkey = "Bbyc689ZxC";
 	if($result)
 	{
-		$query1 = "INSERT INTO hello(gkey) VALUES('$gkey')";
+		/*$query1 = "INSERT INTO hello(gkey) VALUES('$gkey')";
 		echo $query1;
 		$result1 = mysqli_query($conn,$query1);
 		if($result1)
 			echo "yoo";
 		else
-			echo "arey arey";
-		/*while($row = mysqli_fetch_assoc($result))
+			echo "arey arey";*/
+		while($row = mysqli_fetch_assoc($result))
 		{
 			$email = $row['email'];
 			echo $email;
@@ -46,7 +46,7 @@
 			   exit;
 			}
 
-		}*/
+		}
 	}
 
 	
