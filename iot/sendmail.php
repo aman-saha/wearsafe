@@ -4,21 +4,12 @@
 ?>
 <?php
 	
-	$gkey = $_POST['gkey'];
-	//$gkey = "Bbyc689ZxC";
-	//echo "dsajh";
+	//$gkey = $_POST['gkey'];
+	$gkey = "Bbyc689ZxC";
 	$query = "SELECT email from usr_tbl WHERE gps_id = '$gkey'";
 	$result = mysqli_query($conn,$query);
-	//$gkey = "Bbyc689ZxC";
 	if($result)
 	{
-		/*$query1 = "INSERT INTO hello(gkey) VALUES('$gkey')";
-		echo $query1;
-		$result1 = mysqli_query($conn,$query1);
-		if($result1)
-			echo "yoo";
-		else
-			echo "arey arey";*/
 		while($row = mysqli_fetch_assoc($result))
 		{
 			$email = $row['email'];
