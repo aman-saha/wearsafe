@@ -3,19 +3,21 @@
 	include("config.inc.php");
 ?>
 <?php
+	
 	$gkey = $_POST['gkey'];
 	//$gkey = "Bbyc689ZxC";
 	//echo "dsajh";
 	$query = "SELECT email from usr_tbl WHERE gps_id = '$gkey'";
 	$result = mysqli_query($conn,$query);
 	//$gkey = "Bbyc689ZxC";
+	echo "$gkey";
 	if($result)
 	{
-		while($row = mysqli_fetch_assoc($result))
+		/*while($row = mysqli_fetch_assoc($result))
 		{
 			$email = $row['email'];
 			echo $email;
-			/*require 'PHPMailer-master/PHPMailerAutoload.php';
+			require 'PHPMailer-master/PHPMailerAutoload.php';
 			require 'vendor/autoload.php';
 			$mail = new PHPMailer;
 			$mail->isSMTP();
@@ -30,7 +32,7 @@
 			$mail->WordWrap = 50;
 			$mail->isHTML(true);
 			$mail->Subject = 'Wear Safe Alert.';
-			$mail->Body    = 'You have successfully registered for <b>Tag-me-Not</b> Regards, Team Tag. ';
+			$mail->Body    = 'You have successfully registered for <b>Wear Safe alert</b> Regards, Team Wear Safe. ';
 			$mail->AltBody = 'This is the body in plain text for non-HTML mail clients';
 			if(!$mail->send()) {
 			   echo 'Message could not be sent.';
@@ -40,7 +42,6 @@
 */
 		}
 	}
-	return $gkey;
 
 	
 
