@@ -4,8 +4,8 @@
 ?>
 <?php
 	
-	$gkey = $_POST['gkey'];
-	//$gkey = "Bbyc689ZxC";
+	//$gkey = $_POST['gkey'];
+	$gkey = "Bbyc689ZxC";
 	//echo "dsajh";
 	$query = "SELECT email from usr_tbl WHERE gps_id = '$gkey'";
 	$result = mysqli_query($conn,$query);
